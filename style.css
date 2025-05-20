@@ -49,3 +49,38 @@ body {
     border-top: 1px solid #ddd;
     background-color: #fafafa;
   }
+  .welcome-banner {
+    text-align: center;
+    margin-top: 60px;
+  }
+  
+  .welcome-banner h1 {
+    font-size: 36px;
+    color: #0077cc;
+  }
+  .filter {
+    padding: 20px 50px;
+    text-align: center;
+    background-color: #f0f0f0;
+  }
+  
+  .filter label,
+  .filter select {
+    margin: 0 10px;
+    font-size: 16px;
+  }
+  
+  .tutor-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px 50px;
+  }
+  
+  .tutor-card {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
