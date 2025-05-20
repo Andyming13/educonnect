@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>预约辅导课程 - EduConnect</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <img src="assets/logo.png" alt="EduConnect Logo" class="logo">
+    <h1>预约辅导课程</h1>
+    <p>请选择课程信息并提交预约申请</p>
+  </header>
+
+  <nav>
+    <a href="index.html">首页</a>
+    <a href="tutor.html">导师目录</a>
+    <a href="booking.html">预约系统</a>
+    <a href="live.html">Live Class</a>
+    <a href="login.html">登录</a>
+    <a href="feedback.html">反馈评价</a>
+    <a href="contact.html">联系我们</a>
+    <a href="about.html">关于我们</a>
+  </nav>
+
+  <main>
+    <section class="booking-form">
+      <form>
+        <label for="subject">选择科目：</label>
+        <select id="subject" name="subject" required>
+          <option value="">请选择</option>
+          <option value="数学">数学</option>
+          <option value="计算机">计算机</option>
+          <option value="物理">物理</option>
+          <option value="化学">化学</option>
+          <option value="英语">英语</option>
+        </select>
+
+        <label for="tutor">选择导师：</label>
+        <select id="tutor" name="tutor" required>
+          <option value="">请选择</option>
+          <option>Emily Zhang</option>
+          <option>John Miller</option>
+          <option>Sofia Oliveira</option>
+          <option>Hiroshi Tanaka</option>
+          <option>Lisa Müller</option>
+          <option>Ali Khan</option>
+          <option>Grace Chen</option>
+          <option>Carlos Ruiz</option>
+          <option>Nina Petrova</option>
+          <option>Ahmed Hassan</option>
+        </select>
+
+        <label for="date">选择日期：</label>
+        <input type="date" id="date" name="date" min="" max="" required>
+
+        <label for="time">选择时间：</label>
+        <select id="time" name="time" required>
+          <option value="">请选择</option>
+          <!-- 时间段从 8:00 到 17:00 每小时一节课 -->
+          <option value="">请选择</option>
+          <option>08:00 - 09:00</option>
+          <option>09:00 - 10:00</option>
+          <option>10:00 - 11:00</option>
+          <option>11:00 - 12:00</option>
+          <option>12:00 - 13:00</option>
+          <option>13:00 - 14:00</option>
+          <option>14:00 - 15:00</option>
+          <option>15:00 - 16:00</option>
+          <option>16:00 - 17:00</option>
+        </select>
+
+        <button type="submit">提交预约</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 EduConnect. All rights reserved.
+  </footer>
+
+  <script>
+    // 设置日期选择为今天起的 30 天内工作日
+    const dateInput = document.getElementById("date");
+    const today = new Date();
+    const maxDate = new Date();
+    maxDate.setDate(today.getDate() + 30);
+
+    function formatDate(date) {
+      return date.toISOString().split('T')[0];
+    }
+
+    dateInput.setAttribute("min", formatDate(today));
+    dateInput.setAttribute("max", formatDate(maxDate));
+  </script>
+</body>
+</html>
