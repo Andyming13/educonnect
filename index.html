@@ -2,32 +2,77 @@
 <html lang="zh">
 <head>
   <meta charset="UTF-8">
-  <title>EduConnect 数字学习平台</title>
+  <title>EduConnect Digital Learning Platform</title>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="assets/logo.png">
+  <style>
+    .top-login {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 14px;
+    }
+    .homepage-login {
+      max-width: 400px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .homepage-login form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .homepage-login input, .homepage-login button {
+      padding: 8px;
+      font-size: 16px;
+    }
+    .homepage-login button {
+      background-color: #0077cc;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    .homepage-login button:hover {
+      background-color: #005fa3;
+    }
+  </style>
 </head>
 <body>
-  <header>
+  <header style="position: relative;">
     <img src="assets/logo.png" alt="EduConnect Logo" class="logo">
-    <h1>欢迎来到 EduConnect</h1>
-    <p>一个连接学生与导师的数字化学习平台</p>
+    <div class="top-login">
+      <a href="#loginSection">Login</a>
+    </div>
+    <h1>EduConnect</h1>
+    <p>A digital learning platform that connects students and mentors</p>
   </header>
 
   <nav>
-    <a href="index.html">首页</a>
-    <a href="tutor.html">导师目录</a>
-    <a href="booking.html">预约系统</a>
+    <a href="index.html">Homepage</a>
+    <a href="tutor.html">Tutor Catalogue</a>
+    <a href="booking.html">Booking System</a>
     <a href="live.html">Live Class</a>
-    <a href="login.html">登录</a>
-    <a href="feedback.html">反馈评价</a>
-    <a href="contact.html">联系我们</a>
-    <a href="about.html">关于我们</a>
   </nav>
 
   <main>
     <section class="welcome-banner">
-        <h1>Welcome to EduConnect !</h1>
-      </section>
+      <h1>Welcome to EduConnect !</h1>
+    </section>
+
+    <section id="loginSection" class="homepage-login">
+      <h2>Login Your EduConnect</h2>
+      <form onsubmit="handleLogin(event)">
+        <label for="username">Username：</label>
+        <input type="text" id="username" required>
+        <label for="password">Password：</label>
+        <input type="password" id="password" required>
+        <button type="submit">Login</button>
+      </form>
+    </section>
+
     <h2>平台功能介绍</h2>
     <ul>
       <li>查看并搜索导师</li>
@@ -38,8 +83,18 @@
     </ul>
   </main>
 
-  <footer>
-    &copy; 2025 EduConnect. Powered by GitHub Pages.
+  <footer class="footer-muted">
+    <a href="feedback.html">反馈评价</a> | 
+    <a href="contact.html">联系我们</a> | 
+    <a href="about.html">关于我们</a><br>
+    <span>&copy; 2025 EduConnect</span>
   </footer>
+
+  <script>
+    function handleLogin(e) {
+      e.preventDefault();
+      window.location.href = "user.html";
+    }
+  </script>
 </body>
 </html>
