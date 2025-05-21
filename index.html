@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>EduConnect Digital Learning Platform</title>
@@ -11,6 +11,14 @@
       top: 20px;
       right: 30px;
       font-size: 14px;
+    }
+    .top-login a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .top-login a:hover {
+      text-decoration: underline;
     }
     .homepage-login {
       max-width: 400px;
@@ -38,6 +46,18 @@
     .homepage-login button:hover {
       background-color: #005fa3;
     }
+    .features-section {
+      text-align: center;
+      margin-top: 40px;
+    }
+    .features-section ul {
+      list-style: none;
+      padding: 0;
+      font-size: 18px;
+    }
+    .features-section li {
+      margin: 10px 0;
+    }
   </style>
 </head>
 <body>
@@ -58,35 +78,38 @@
   </nav>
 
   <main>
-    <section class="welcome-banner">
-      <h1>Welcome to EduConnect !</h1>
+    <!-- ✅ 整体背景包裹区 -->
+    <section class="hero-section">
+      <h1 class="hero-title">Welcome to EduConnect!</h1>
+  
+      <div class="homepage-login">
+        <h2>Log in to your account</h2>
+        <form onsubmit="handleLogin(event)">
+          <label for="username">Username:</label>
+          <input type="text" id="username" required>
+          <label for="password">Password:</label>
+          <input type="password" id="password" required>
+          <button type="submit">Login</button>
+        </form>
+      </div>
+  
+      <div class="features-overlay">
+          <h2>Platform Features</h2>
+          <ul>
+          <li>Search and browse tutors by subject</li>
+          <li>Book 1-on-1 tutoring sessions</li>
+          <li>Live video class support (coming soon)</li>
+          <li>User registration and login system</li>
+          <li>Submit feedback and rate tutors</li>
+        </ul>
+      </div>
     </section>
-
-    <section id="loginSection" class="homepage-login">
-      <h2>Login Your EduConnect</h2>
-      <form onsubmit="handleLogin(event)">
-        <label for="username">Username：</label>
-        <input type="text" id="username" required>
-        <label for="password">Password：</label>
-        <input type="password" id="password" required>
-        <button type="submit">Login</button>
-      </form>
-    </section>
-
-    <h2>平台功能介绍</h2>
-    <ul>
-      <li>查看并搜索导师</li>
-      <li>在线预约辅导课程</li>
-      <li>未来支持视频授课</li>
-      <li>用户注册与登录</li>
-      <li>提交反馈与评价</li>
-    </ul>
   </main>
 
   <footer class="footer-muted">
-    <a href="feedback.html">反馈评价</a> | 
-    <a href="contact.html">联系我们</a> | 
-    <a href="about.html">关于我们</a><br>
+    <a href="feedback.html">Feedback</a> | 
+    <a href="contact.html">Contact Us</a> | 
+    <a href="about.html">About Us</a><br>
     <span>&copy; 2025 EduConnect</span>
   </footer>
 

@@ -1,23 +1,40 @@
-/* Home page */
+/* ========================
+   GLOBAL STYLES
+========================= */
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f5f7fa;
     margin: 0;
     padding: 0;
-    color: #333;
+    color: #1177cb;
   }
   
   header {
     text-align: center;
     padding: 30px;
-    background-color: #101111;
+    background-color: #3ba1d8;
     color: white;
+    position: relative;
   }
   
   .logo {
     width: 60px;
     vertical-align: middle;
     margin-top: 10px;
+  }
+  
+  .top-login a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 14px;
+  }
+  
+  .top-login a:hover {
+    text-decoration: underline;
   }
   
   nav {
@@ -43,27 +60,62 @@ body {
     line-height: 1.6;
   }
   
-  footer {
+  /* ========================
+     HOMEPAGE - HERO SECTION
+  ========================= */
+  .hero-section {
+    background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url("assets/background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 80px 20px;
     text-align: center;
-    font-size: 14px;
-    color: #666;
-    padding: 20px;
-    border-top: 1px solid #ddd;
-    background-color: #fafafa;
-  }
-  .welcome-banner {
-    text-align: center;
-    margin-top: 60px;
+    color: white;
   }
   
-  .welcome-banner h1 {
+  .hero-title {
     font-size: 36px;
-    color: #0077cc;
+    margin-bottom: 40px;
+    color: #ffffff;
   }
-
-
-  /* Filter section */
-
+  
+  .login-and-features {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .homepage-login {
+    background-color: rgba(255, 255, 255, 0.96);
+    color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    max-width: 400px;
+    margin: 0 auto 50px auto;
+  }
+  
+  .features-overlay h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .features-overlay ul {
+    list-style: none;
+    padding: 0;
+    font-size: 18px;
+  }
+  
+  .features-overlay li {
+    margin: 10px 0;
+  }
+  
+  /* ========================
+     FILTER & TUTOR LIST
+  ========================= */
   .filter {
     padding: 20px 50px;
     text-align: center;
@@ -90,8 +142,10 @@ body {
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   }
-
-/*  booking section */
+  
+  /* ========================
+     BOOKING PAGE
+  ========================= */
   .booking-form {
     padding: 30px 50px;
     background-color: #f9f9f9;
@@ -122,23 +176,35 @@ body {
     border-radius: 6px;
   }
   
-  .booking-form button {
-    background-color: #0077cc;
-    color: white;
-    cursor: pointer;
-  }
-  
-  .booking-form button:hover {
-    background-color: #005fa3;
-  }
   .success-message {
     color: green;
     font-size: 16px;
     text-align: center;
     margin-top: 20px;
   }
-
-
+  
+  /* ========================
+     BUTTONS
+  ========================= */
+  button,
+  .booking-form button {
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  button:hover,
+  .booking-form button:hover {
+    background-color: #005fa3;
+  }
+  
+  /* ========================
+     FOOTER
+  ========================= */
   .footer-muted {
     font-size: 12px;
     color: #999;
@@ -151,29 +217,4 @@ body {
     color: #888;
     margin: 0 5px;
     text-decoration: none;
-  }
-
-/*  login colour */
-  .top-login a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  .top-login a:hover {
-    text-decoration: underline;
-  }
-
-/* 统一按钮样式 */
-  button {
-    background-color: #0077cc;
-    color: white;
-    border: none;
-    padding: 10px 16px;
-    font-size: 16px;
-    border-radius: 6px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #005fa3;
   }
