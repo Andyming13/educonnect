@@ -4,23 +4,39 @@
   <meta charset="UTF-8">
   <title>预约辅导课程 - EduConnect</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="assets/logo.png">
+  <style>
+    .top-login {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 14px;
+    }
+    .top-login a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .top-login a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-  <header>
+  <header style="position: relative;">
     <img src="assets/logo.png" alt="EduConnect Logo" class="logo">
+    <div class="top-login">
+      <a href="login.html">登录</a>
+    </div>
     <h1>预约辅导课程</h1>
     <p>请选择课程信息并提交预约申请</p>
   </header>
 
   <nav>
-    <a href="index.html">首页</a>
-    <a href="tutor.html">导师目录</a>
-    <a href="booking.html">预约系统</a>
+    <a href="index.html">Homepage</a>
+    <a href="tutor.html">Tutor Catalogue</a>
+    <a href="booking.html">Booking System</a>
     <a href="live.html">Live Class</a>
-    <a href="login.html">登录</a>
-    <a href="feedback.html">反馈评价</a>
-    <a href="contact.html">联系我们</a>
-    <a href="about.html">关于我们</a>
   </nav>
 
   <main>
@@ -76,8 +92,11 @@
     </section>
   </main>
 
-  <footer>
-    &copy; 2025 EduConnect. All rights reserved.
+  <footer class="footer-muted">
+    <a href="feedback.html">反馈评价</a> | 
+    <a href="contact.html">联系我们</a> | 
+    <a href="about.html">关于我们</a><br>
+    <span>&copy; 2025 EduConnect</span>
   </footer>
 
   <script>
