@@ -1,31 +1,51 @@
-<!-- 3. user.html 页面（登录成功后） -->
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>我的账户 - EduConnect</title>
+  <title>My Account - EduConnect</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .back-button {
+      display: inline-block;
+      margin-top: 20px;
+      background-color: #0077cc;
+      color: white;
+      padding: 10px 16px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .back-button:hover {
+      background-color: #005fa3;
+    }
+  </style>
 </head>
 <body>
   <header>
     <img src="assets/logo.png" alt="EduConnect Logo" class="logo">
-    <h1>Welcome Back，XXX</h1>
+    <h1>Welcome Back, Student001</h1>
   </header>
+
+  <!-- Back to homepage button -->
+  <div style="text-align: center;">
+    <a href="index.html" class="back-button">← Back to Homepage</a>
+  </div>
 
   <main style="display: flex; justify-content: center; margin-top: 40px;">
     <div style="text-align: center;">
-      <img src="assets/logo.png" alt="头像" style="width: 100px; border-radius: 50%;">
-      <h2>姓名：XXX</h2>
-      <p>性别：男</p>
-      <p>年龄：20</p>
-      <p>角色：学生</p>
+      <img src="assets/logo.png" alt="Avatar" style="width: 100px; border-radius: 50%;">
+      <h2>Name: Wang Xiaoming</h2>
+      <p>Gender: Male</p>
+      <p>Age: 20</p>
+      <p>Role: Student</p>
     </div>
   </main>
 
   <footer class="footer-muted">
-    <a href="feedback.html">反馈评价</a> | 
-    <a href="contact.html">联系我们</a> | 
-    <a href="about.html">关于我们</a><br>
+    <a href="feedback.html">Feedback</a> | 
+    <a href="contact.html">Contact Us</a> | 
+    <a href="about.html">About Us</a><br>
     <span>&copy; 2025 EduConnect</span>
   </footer>
 </body>
