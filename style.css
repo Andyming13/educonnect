@@ -219,7 +219,7 @@ body {
     text-decoration: none;
   }
 
-  
+
   .back-button {
     display: inline-block;
     background-color: #0077cc;
@@ -231,5 +231,22 @@ body {
   }
   
   .back-button:hover {
+    background-color: #005fa3;
+  }
+
+
+  .back-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #0077cc;
+    color: white;
+    padding: 6px 12px;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 5px;
+    z-index: 999;
+  }
+  .back-btn:hover {
     background-color: #005fa3;
   }
