@@ -25,7 +25,7 @@
 
   <main>
     <section class="booking-form">
-      <form>
+      <form onsubmit="handleSubmit(event)">
         <label for="subject">选择科目：</label>
         <select id="subject" name="subject" required>
           <option value="">请选择</option>
@@ -52,12 +52,10 @@
         </select>
 
         <label for="date">选择日期：</label>
-        <input type="date" id="date" name="date" min="" max="" required>
+        <input type="date" id="date" name="date" required>
 
         <label for="time">选择时间：</label>
         <select id="time" name="time" required>
-          <option value="">请选择</option>
-          <!-- 时间段从 8:00 到 17:00 每小时一节课 -->
           <option value="">请选择</option>
           <option>08:00 - 09:00</option>
           <option>09:00 - 10:00</option>
@@ -72,6 +70,9 @@
 
         <button type="submit">提交预约</button>
       </form>
+
+      <!-- 提交成功提示框 -->
+      <p id="successMessage" class="success-message" style="display: none;">✅ 您的预约已成功提交！</p>
     </section>
   </main>
 
@@ -80,7 +81,7 @@
   </footer>
 
   <script>
-    // 设置日期选择为今天起的 30 天内工作日
+    // 设置日期范围为今天起的 30 天
     const dateInput = document.getElementById("date");
     const today = new Date();
     const maxDate = new Date();
@@ -92,6 +93,12 @@
 
     dateInput.setAttribute("min", formatDate(today));
     dateInput.setAttribute("max", formatDate(maxDate));
+
+    // 成功提交处理
+    function handleSubmit(event) {
+      event.preventDefault(); // 阻止表单提交刷新页面
+      document.getElementById("successMessage").style.display = "block";
+    }
   </script>
 </body>
 </html>
