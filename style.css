@@ -1,4 +1,4 @@
-\\ Home page
+/* Home page */
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f5f7fa;
@@ -17,6 +17,7 @@ body {
   .logo {
     width: 60px;
     vertical-align: middle;
+    margin-top: 10px;
   }
   
   nav {
@@ -61,7 +62,7 @@ body {
   }
 
 
-  \\ Filter section
+  /* Filter section */
 
   .filter {
     padding: 20px 50px;
@@ -90,7 +91,7 @@ body {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   }
 
-\\ booking section
+/*  booking section */
   .booking-form {
     padding: 30px 50px;
     background-color: #f9f9f9;
@@ -135,4 +136,44 @@ body {
     font-size: 16px;
     text-align: center;
     margin-top: 20px;
+  }
+
+
+  .footer-muted {
+    font-size: 12px;
+    color: #999;
+    text-align: center;
+    padding: 20px;
+    background-color: #f2f2f2;
+  }
+  
+  .footer-muted a {
+    color: #888;
+    margin: 0 5px;
+    text-decoration: none;
+  }
+
+/*  login colour */
+  .top-login a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .top-login a:hover {
+    text-decoration: underline;
+  }
+
+/* 统一按钮样式 */
+  button {
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #005fa3;
   }

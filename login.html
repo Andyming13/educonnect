@@ -1,0 +1,41 @@
+<!-- 2. login.html 页面 -->
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>登录 - EduConnect</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <img src="assets/logo.png" alt="EduConnect Logo" class="logo">
+    <h1>登录</h1>
+  </header>
+
+  <main style="display: flex; justify-content: center; margin-top: 40px;">
+    <form id="loginForm" style="width: 300px; display: flex; flex-direction: column; gap: 15px;">
+      <label>用户名：</label>
+      <input type="text" id="username" required>
+      <label>密码：</label>
+      <input type="password" id="password" required>
+      <button type="submit">登录</button>
+    </form>
+  </main>
+
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      window.location.href = "user.html";
+    });
+  </script>
+  
+  <footer class="footer-muted">
+    <a href="feedback.html">反馈评价</a> | 
+    <a href="contact.html">联系我们</a> | 
+    <a href="about.html">关于我们</a><br>
+    <span>&copy; 2025 EduConnect</span>
+  </footer>
+
+  
+</body>
+</html>
