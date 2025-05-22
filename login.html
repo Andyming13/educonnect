@@ -1,26 +1,72 @@
-<!-- 2. login.html 页面 -->
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>登录 - EduConnect</title>
+  <title>Login - EduConnect</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="assets/logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    .login-wrapper {
+      display: flex;
+      justify-content: center;
+      margin-top: 80px;
+    }
+    .login-form {
+      width: 320px;
+      background-color: #fff;
+      padding: 25px 30px;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .login-form label {
+      font-weight: bold;
+    }
+    .login-form input,
+    .login-form button {
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 12px;
+      border: 1px solid #ccc;
+    }
+    .login-form button {
+      background-color: #0077cc;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    .login-form button:hover {
+      background-color: #005fa3;
+    }
+  </style>
 </head>
 <body>
   <header>
     <img src="assets/logo.png" alt="EduConnect Logo" class="logo">
-    <h1>登录</h1>
+    <h1>Login</h1>
   </header>
 
-  <main style="display: flex; justify-content: center; margin-top: 40px;">
-    <form id="loginForm" style="width: 300px; display: flex; flex-direction: column; gap: 15px;">
-      <label>用户名：</label>
+  <main class="login-wrapper">
+    <form id="loginForm" class="login-form">
+      <label for="username">Username:</label>
       <input type="text" id="username" required>
-      <label>密码：</label>
+
+      <label for="password">Password:</label>
       <input type="password" id="password" required>
-      <button type="submit">登录</button>
+
+      <button type="submit">Login</button>
     </form>
   </main>
+
+  <footer class="footer-muted">
+    <a href="feedback.html">Feedback</a> | 
+    <a href="contact.html">Contact Us</a> | 
+    <a href="about_us.html">About Us</a><br>
+    <span>&copy; 2025 EduConnect</span>
+  </footer>
 
   <script>
     document.getElementById("loginForm").addEventListener("submit", function(e) {
@@ -28,14 +74,5 @@
       window.location.href = "user.html";
     });
   </script>
-  
-  <footer class="footer-muted">
-    <a href="feedback.html">反馈评价</a> | 
-    <a href="contact.html">联系我们</a> | 
-    <a href="about_us.html">关于我们</a><br>
-    <span>&copy; 2025 EduConnect</span>
-  </footer>
-
-  
 </body>
 </html>
