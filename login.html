@@ -55,15 +55,36 @@
       margin-top: 100px;
       display: none;
     }
+
+    .back-btn {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background-color: #0077cc;
+      color: white;
+      padding: 8px 14px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .back-btn:hover {
+      background-color: #005fa3;
+    }
   </style>
 </head>
 <body>
+  <!-- 返回主页按钮 -->
+  <a href="index.html" class="back-btn">← Back to Homepage</a>
+
   <header>
     <img src="assets/logo.png" alt="EduConnect Logo" class="logo" />
     <h1>Login</h1>
   </header>
 
   <main class="login-wrapper">
+    <!-- 登录表单 -->
     <form id="loginForm" class="login-form">
       <label for="username">Username:</label>
       <input type="text" id="username" required />
@@ -74,7 +95,8 @@
       <button type="submit">Login</button>
     </form>
 
-    <div id="welcomeMessage" class="welcome-message">Welcome, Andy!</div>
+    <!-- 欢迎信息 -->
+    <div id="welcomeMessage" class="welcome-message">Welcome!</div>
   </main>
 
   <footer class="footer-muted">
@@ -85,16 +107,30 @@
   </footer>
 
   <script>
+    // 若已登录，自动跳转回主页
+    document.addEventListener("DOMContentLoaded", () => {
+      if (localStorage.getItem("educonnect_logged_in") === "true") {
+        window.location.href = "index.html";
+      }
+    });
+
+    // 登录提交逻辑
     document.getElementById("loginForm").addEventListener("submit", function (e) {
       e.preventDefault();
 
       const username = document.getElementById("username").value || "Andy";
-      const welcomeText = document.getElementById("welcomeMessage");
+      localStorage.setItem("educonnect_logged_in", "true");
+      localStorage.setItem("educonnect_username", username);
 
-      // 隐藏表单并显示欢迎语
+      const welcomeText = document.getElementById("welcomeMessage");
       this.style.display = "none";
       welcomeText.textContent = `Welcome, ${username}!`;
       welcomeText.style.display = "block";
+
+      // 1秒后跳转回首页
+      setTimeout(() => {
+        window.location.href = "index.html";
+      }, 1000);
     });
   </script>
 </body>
