@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>导师目录 - EduConnect</title>
+  <title>Tutor Catalogue - EduConnect</title>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="assets/logo.png">
   <style>
@@ -28,10 +28,10 @@
   <header style="position: relative;">
     <img src="assets/logo.png" alt="EduConnect Logo" class="logo">
     <div class="top-login">
-      <a href="login.html">登录</a>
+      <a href="login.html">Login</a>
     </div>
-    <h1>导师目录</h1>
-    <p>浏览可用导师并按学科和专业筛选</p>
+    <h1>Tutor Catalogue</h1>
+    <p>Browse available tutors and filter by subject and specialty</p>
   </header>
 
   <nav>
@@ -43,86 +43,85 @@
 
   <main>
     <section class="filter">
-      <label for="subject">按学科筛选:</label>
+      <label for="subject">Filter by Subject:</label>
       <select id="subject">
-        <option>全部</option>
-        <option>数学</option>
-        <option>计算机</option>
-        <option>物理</option>
-        <option>化学</option>
-        <option>英语</option>
+        <option>All</option>
+        <option>Math</option>
+        <option>Computer Science</option>
+        <option>Physics</option>
+        <option>Chemistry</option>
+        <option>English</option>
       </select>
 
-      <label for="specialty">按专业筛选:</label>
+      <label for="specialty">Filter by Specialty:</label>
       <select id="specialty">
-        <option>全部</option>
-        <option>代数</option>
-        <option>机器学习</option>
-        <option>量子物理</option>
-        <option>有机化学</option>
-        <option>英语写作</option>
+        <option>All</option>
+        <option>Algebra</option>
+        <option>Machine Learning</option>
+        <option>Quantum Physics</option>
+        <option>Organic Chemistry</option>
+        <option>English Writing</option>
       </select>
     </section>
 
     <section class="tutor-list">
-      <!-- 每个导师卡片 -->
       <div class="tutor-card">
         <h3>Emily Zhang</h3>
-        <p>性别：女 ｜ 年龄：34 ｜ 国家：中国</p>
-        <p>学科：数学 ｜ 专业：代数</p>
+        <p>Gender: Female | Age: 34 | Country: China</p>
+        <p>Subject: Math | Specialty: Algebra</p>
       </div>
       <div class="tutor-card">
         <h3>John Miller</h3>
-        <p>性别：男 ｜ 年龄：45 ｜ 国家：美国</p>
-        <p>学科：计算机 ｜ 专业：机器学习</p>
+        <p>Gender: Male | Age: 45 | Country: USA</p>
+        <p>Subject: Computer Science | Specialty: Machine Learning</p>
       </div>
       <div class="tutor-card">
         <h3>Sofia Oliveira</h3>
-        <p>性别：女 ｜ 年龄：29 ｜ 国家：巴西</p>
-        <p>学科：化学 ｜ 专业：有机化学</p>
+        <p>Gender: Female | Age: 29 | Country: Brazil</p>
+        <p>Subject: Chemistry | Specialty: Organic Chemistry</p>
       </div>
       <div class="tutor-card">
         <h3>Hiroshi Tanaka</h3>
-        <p>性别：男 ｜ 年龄：39 ｜ 国家：日本</p>
-        <p>学科：物理 ｜ 专业：量子物理</p>
+        <p>Gender: Male | Age: 39 | Country: Japan</p>
+        <p>Subject: Physics | Specialty: Quantum Physics</p>
       </div>
       <div class="tutor-card">
         <h3>Lisa Müller</h3>
-        <p>性别：女 ｜ 年龄：41 ｜ 国家：德国</p>
-        <p>学科：英语 ｜ 专业：英语写作</p>
+        <p>Gender: Female | Age: 41 | Country: Germany</p>
+        <p>Subject: English | Specialty: English Writing</p>
       </div>
       <div class="tutor-card">
         <h3>Ali Khan</h3>
-        <p>性别：男 ｜ 年龄：33 ｜ 国家：巴基斯坦</p>
-        <p>学科：数学 ｜ 专业：微积分</p>
+        <p>Gender: Male | Age: 33 | Country: Pakistan</p>
+        <p>Subject: Math | Specialty: Calculus</p>
       </div>
       <div class="tutor-card">
         <h3>Grace Chen</h3>
-        <p>性别：女 ｜ 年龄：36 ｜ 国家：新加坡</p>
-        <p>学科：计算机 ｜ 专业：前端开发</p>
+        <p>Gender: Female | Age: 36 | Country: Singapore</p>
+        <p>Subject: Computer Science | Specialty: Front-end Development</p>
       </div>
       <div class="tutor-card">
         <h3>Carlos Ruiz</h3>
-        <p>性别：男 ｜ 年龄：42 ｜ 国家：西班牙</p>
-        <p>学科：物理 ｜ 专业：天体物理</p>
+        <p>Gender: Male | Age: 42 | Country: Spain</p>
+        <p>Subject: Physics | Specialty: Astrophysics</p>
       </div>
       <div class="tutor-card">
         <h3>Nina Petrova</h3>
-        <p>性别：女 ｜ 年龄：30 ｜ 国家：俄罗斯</p>
-        <p>学科：英语 ｜ 专业：语法教学</p>
+        <p>Gender: Female | Age: 30 | Country: Russia</p>
+        <p>Subject: English | Specialty: Grammar Teaching</p>
       </div>
       <div class="tutor-card">
         <h3>Ahmed Hassan</h3>
-        <p>性别：男 ｜ 年龄：38 ｜ 国家：埃及</p>
-        <p>学科：化学 ｜ 专业：无机化学</p>
+        <p>Gender: Male | Age: 38 | Country: Egypt</p>
+        <p>Subject: Chemistry | Specialty: Inorganic Chemistry</p>
       </div>
     </section>
   </main>
 
   <footer class="footer-muted">
-    <a href="feedback.html">反馈评价</a> | 
-    <a href="contact.html">联系我们</a> | 
-    <a href="about.html">关于我们</a><br>
+    <a href="feedback.html">Feedback</a> | 
+    <a href="contact.html">Contact Us</a> | 
+    <a href="about.html">About Us</a><br>
     <span>&copy; 2025 EduConnect</span>
   </footer>
 </body>
