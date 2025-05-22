@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register - EduConnect</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="assets/logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    .register-wrapper {
+      display: flex;
+      justify-content: center;
+      margin-top: 80px;
+    }
+    .register-form {
+      width: 360px;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .register-form label {
+      font-weight: bold;
+    }
+    .register-form input {
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 12px;
+      border: 1px solid #ccc;
+    }
+    .register-form button {
+      background-color: #0077cc;
+      color: white;
+      border: none;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 12px;
+      cursor: pointer;
+    }
+    .register-form button:hover {
+      background-color: #005fa3;
+    }
+    .show-password {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      margin-top: -10px;
+    }
+    .show-password input {
+      margin-right: 5px;
+    }
+    .back-btn {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background-color: #0077cc;
+      color: white;
+      padding: 6px 12px;
+      text-decoration: none;
+      font-size: 14px;
+      border-radius: 8px;
+    }
+    .back-btn:hover {
+      background-color: #005fa3;
+    }
+    .success-message {
+      text-align: center;
+      color: green;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <a href="index.html" class="back-btn">← Back to Homepage</a>
+
+  <header>
+    <img src="assets/logo.png" alt="EduConnect Logo" class="logo">
+    <h1>Register</h1>
+  </header>
+
+  <main class="register-wrapper">
+    <form class="register-form" id="registerForm" onsubmit="return handleRegister(event)">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+
+      <label for="confirm">Confirm Password:</label>
+      <input type="password" id="confirm" name="confirm" required>
+
+      <div class="show-password">
+        <input type="checkbox" onclick="togglePassword()"> Show Password
+      </div>
+
+      <button type="submit">Register</button>
+      <div id="successMessage" class="success-message" style="display: none;">✅ Registration successful! Redirecting to homepage...</div>
+    </form>
+  </main>
+
+  <footer class="footer-muted">
+    <a href="feedback.html">Feedback</a> | 
+    <a href="contact.html">Contact Us</a> | 
+    <a href="about_us.html">About Us</a><br>
+    <span>&copy; 2025 EduConnect</span>
+  </footer>
+
+  <script>
+    function togglePassword() {
+      const pwd = document.getElementById("password");
+      const confirm = document.getElementById("confirm");
+      const type = pwd.type === "password" ? "text" : "password";
+      pwd.type = type;
+      confirm.type = type;
+    }
+
+    function handleRegister(event) {
+      event.preventDefault();
+      document.getElementById("successMessage").style.display = "block";
+      setTimeout(() => {
+        window.location.href = "index.html";
+      }, 3000);
+    }
+  </script>
+</body>
+</html>
