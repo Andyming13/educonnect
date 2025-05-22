@@ -158,3 +158,17 @@ main {
 .footer-muted a:hover {
   text-decoration: underline;
 }
+
+
+
+/* Apply rounded corners globally where appropriate */
+body, main, section, nav, .hero-section, .homepage-login, .features-overlay,
+.tutor-card, .booking-form form, footer, header {
+  border-radius: 16px !important;
+  overflow: hidden; /* Ensure content follows rounded edges */
+}
+
+/* Optional: soften shadow edges to match rounded design */
+section, nav, .homepage-login, .booking-form form {
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
