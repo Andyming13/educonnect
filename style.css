@@ -58,7 +58,7 @@ nav {
     border-radius: 16px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.05);
   }
-  
+
 nav a {
     display: inline-block;
     padding: 10px 20px;
@@ -354,3 +354,29 @@ button:hover,
 .back-btn:hover {
   background-color: #005fa3;
 }
+
+
+
+.top-welcome {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .logout-btn {
+    background-color: #cc3333;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 12px;
+    font-size: 13px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .logout-btn:hover {
+    background-color: #aa2222;
+  }

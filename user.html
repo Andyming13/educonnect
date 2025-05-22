@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>My Account - EduConnect</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="assets/logo.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet" />
   <style>
     .back-button {
       display: inline-block;
-      margin-top: 20px;
+      margin: 20px auto;
       background-color: #0077cc;
       color: white;
       padding: 10px 16px;
-      border-radius: 6px;
+      border-radius: 12px;
       text-decoration: none;
       font-weight: bold;
     }
@@ -19,34 +21,90 @@
     .back-button:hover {
       background-color: #005fa3;
     }
+
+    .account-info {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .account-info img {
+      width: 100px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+    }
+
+    .account-info h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+
+    .account-info p {
+      font-size: 16px;
+      color: #333;
+    }
+
+    .logout-btn {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      background-color: #cc3333;
+      color: white;
+      padding: 8px 14px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .logout-btn:hover {
+      background-color: #aa2222;
+    }
   </style>
 </head>
 <body>
   <header>
-    <img src="assets/logo.png" alt="EduConnect Logo" class="logo">
-    <h1>Welcome Back, Andy</h1>
+    <img src="assets/logo.png" alt="EduConnect Logo" class="logo" />
+    <a href="#" class="logout-btn" onclick="handleLogout()">Logout</a>
+    <h1>Welcome Back, <span id="displayName">Andy</span></h1>
   </header>
 
-  <!-- Back to homepage button -->
   <div style="text-align: center;">
     <a href="index.html" class="back-button">← Back to Homepage</a>
   </div>
 
-  <main style="display: flex; justify-content: center; margin-top: 40px;">
-    <div style="text-align: center;">
-      <img src="assets/logo.png" alt="Avatar" style="width: 100px; border-radius: 50%;">
-      <h2>Name: Andy</h2>
-      <p>Gender: Male</p>
-      <p>Age: 20</p>
-      <p>Role: Student</p>
-    </div>
+  <main class="account-info">
+    <img src="assets/logo.png" alt="Avatar" />
+    <h2>Name: <span id="displayUsername">Andy</span></h2>
+    <p>Gender: Male</p>
+    <p>Age: 20</p>
+    <p>Role: Student</p>
   </main>
 
   <footer class="footer-muted">
     <a href="feedback.html">Feedback</a> | 
     <a href="contact.html">Contact Us</a> | 
-    <a href="about_us.html">About Us</a><br>
+    <a href="about_us.html">About Us</a><br />
     <span>&copy; 2025 EduConnect</span>
   </footer>
+
+  <!-- ✅ 自动填充和跳转 + Logout 逻辑 -->
+  <script>
+    const name = localStorage.getItem("educonnect_username") || "Andy";
+    document.getElementById("displayName").textContent = name;
+    document.getElementById("displayUsername").textContent = name;
+
+    // 5秒后跳转主页
+    setTimeout(() => {
+      window.location.href = "index.html";
+    }, 5000);
+
+    // 退出登录功能
+    function handleLogout() {
+      localStorage.removeItem("educonnect_logged_in");
+      localStorage.removeItem("educonnect_username");
+      window.location.href = "index.html";
+    }
+  </script>
 </body>
 </html>
