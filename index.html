@@ -6,79 +6,6 @@
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="assets/logo.png">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Roboto', sans-serif;
-    }
-    header {
-      font-family: 'Playfair Display', serif;
-    }
-    h1, h2, h3 {
-      font-family: 'Playfair Display', serif;
-    }
-    .top-login {
-      position: absolute;
-      top: 20px;
-      right: 30px;
-      font-size: 14px;
-    }
-    .top-login a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .top-login a:hover {
-      text-decoration: underline;
-    }
-    .homepage-login {
-      max-width: 400px;
-      margin: 40px auto;
-      padding: 20px;
-      background-color: #f9f9f9;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    .homepage-login form {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-    .homepage-login input, .homepage-login button {
-      padding: 8px;
-      font-size: 16px;
-    }
-    .homepage-login button {
-      background-color: #0077cc;
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
-    .homepage-login button:hover {
-      background-color: #005fa3;
-    }
-    .features-section {
-      text-align: center;
-      margin-top: 40px;
-    }
-    .features-section ul {
-      list-style: none;
-      padding: 0;
-      font-size: 18px;
-    }
-    .features-section li {
-      margin: 10px 0;
-    }
-    .hero-title {
-      font-size: 48px;
-      color: #ffffff;
-      font-family: 'Playfair Display', serif;
-      margin-top: 30px;
-      margin-bottom: 40px;
-    }
-    .features-overlay h2 {
-      font-size: 28px;
-    }
-  </style>
 </head>
 <body>
   <header style="position: relative;">
@@ -98,11 +25,10 @@
   </nav>
 
   <main>
-    <!-- ✅ 整体背景包裹区 -->
     <section class="hero-section">
       <h1 class="hero-title">Welcome to EduConnect !</h1>
 
-      <div class="homepage-login">
+      <div class="homepage-login" id="loginSection">
         <h2>Log in to your account</h2>
         <form onsubmit="handleLogin(event)">
           <label for="username">Username:</label>
@@ -114,8 +40,8 @@
       </div>
 
       <div class="features-overlay">
-          <h2>Platform Features</h2>
-          <ul>
+        <h2>Platform Features</h2>
+        <ul>
           <li>Search and browse tutors by subject</li>
           <li>Book 1-on-1 tutoring sessions</li>
           <li>Live video class support (coming soon)</li>
